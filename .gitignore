@@ -1,3 +1,4 @@
 .idea
 *.iml
 jetserver/target
+jetclient/target
