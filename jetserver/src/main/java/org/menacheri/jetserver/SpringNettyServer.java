@@ -1,6 +1,5 @@
 package org.menacheri.jetserver;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.menacheri.jetserver.server.ServerManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
