@@ -30,8 +30,8 @@ public class TestClass
 	{
 		LoginBuilder builder = new LoginBuilder().username("user")
 				.password("pass").connectionKey("Zombie_ROOM_1_REF_KEY_1")
-				.jetserverTcpHostName("localhost").tcpPort(18090)
-				.jetserverUdpHostName("255.255.255.255").udpPort(18090);
+				.jetserverTcpHostName("localhost").tcpPort(8090);
+//				.jetserverUdpHostName("255.255.255.255").udpPort(18090);
 		LoginHelper loginHelper = builder.build();
 		SessionFactory sessionFactory = new SessionFactory(loginHelper);
 		Session session = sessionFactory.createAndConnectSession();
