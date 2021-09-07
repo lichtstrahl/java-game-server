@@ -24,18 +24,11 @@ public class ZombieJetclient
 		LoginHelper loginHelper = builder.build();
 		SessionFactory sessionFactory = new SessionFactory(loginHelper);
 		ScheduledExecutorService taskExecutor = Executors.newSingleThreadScheduledExecutor();
-		for(int i = 1; i<=10; i++){
 			Session session = sessionFactory.createAndConnectSession();
 			addDefaultHandlerToSession(session);
-			GamePlay task = null;
-			if((i % 2) == 0){
-				task = new GamePlay(IAM.DEFENDER, session);
-			}
-			else{
-				task = new GamePlay(IAM.ZOMBIE, session);
-			}
+			GamePlay task = new GamePlay(IAM.ZOMBIE, session);
 			taskExecutor.scheduleAtFixedRate(task, 2000, 200, TimeUnit.MILLISECONDS);
-		}
+
 	}
 	
 	private static void addDefaultHandlerToSession(Session session)
