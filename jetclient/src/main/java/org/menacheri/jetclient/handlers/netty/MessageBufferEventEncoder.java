@@ -12,8 +12,8 @@ import org.menacheri.jetclient.event.Events;
 
 /**
  * Converts an incoming {@link Event} which in turn has a
- * IMessageBuffer<ChannelBuffer> payload to a Netty {@link ChannelBuffer}.
- * <b>Note that {@link Event} instances containing other type of objects as its
+ * IMessageBuffer[ChannelBuffer] payload to a Netty {@link ChannelBuffer}.
+ * Note that {@link Event} instances containing other type of objects as its
  * payload will result in {@link ClassCastException}.
  * 
  * @author Abraham Menacherry.

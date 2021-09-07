@@ -1,0 +1,2 @@
+# Команда для деплоя в локальный репозиторий
+mvn deploy:deploy-file -DgroupId=org.menacheri -DartifactId=jetclient -Dversion=0.1 -Durl=file:../local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./target/jetclient-0.1.jar

@@ -22,12 +22,19 @@
             <distribution>repo</distribution>
 		</license>
 	</licenses>
-	
-	<scm>
-        <connection>scm:git:git@github.com:menacher/java-game-server.git</connection>
-        <developerConnection>scm:git:git@github.com:menacher/java-game-server.git</developerConnection>
-        <url>git@github.com:menacher/java-game-server.git</url>
-    </scm>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>a0m7kqyudldq5-artifactory-primary-0-releases</name>
+			<url>https://ivartifactstore.jfrog.io/artifactory/default-maven-virtual</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>a0m7kqyudldq5-artifactory-primary-0-snapshots</name>
+			<url>https://ivartifactstore.jfrog.io/artifactory/default-maven-virtual</url>
+		</snapshotRepository>
+	</distributionManagement>
     
     <developers>
         <developer>

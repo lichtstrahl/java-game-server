@@ -190,8 +190,8 @@ public class NettyUtils
 	/**
 	 * Writes multiple strings to a channelBuffer with the length of the string
 	 * preceding its content. So if there are two string <code>Hello</code> and
-	 * <code>World</code> then the channel buffer returned would contain <Length
-	 * of Hello><Hello as UTF-8 binary><Length of world><World as UTF-8 binary>
+	 * <code>World</code> then the channel buffer returned would contain [Length
+	 * of Hello][Hello as UTF-8 binary][Length of world][World as UTF-8 binary]
 	 * 
 	 * @param msgs
 	 *            The messages to be written.
@@ -206,9 +206,9 @@ public class NettyUtils
 	/**
 	 * Writes multiple strings to a channelBuffer with the length of the string
 	 * preceding its content. So if there are two string <code>Hello</code> and
-	 * <code>World</code> then the channel buffer returned would contain <Length
-	 * of Hello><Hello as appropriate charset binary><Length of world><World as
-	 * UTF-8 binary>
+	 * <code>World</code> then the channel buffer returned would contain [Length
+	 * of Hello][Hello as appropriate charset binary][Length of world][World as
+	 * UTF-8 binary]
 	 * 
 	 * @param charset
 	 *            The Charset say 'UTF-8' in which the encoding needs to be
