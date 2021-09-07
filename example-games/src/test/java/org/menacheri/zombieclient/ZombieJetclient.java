@@ -24,7 +24,7 @@ public class ZombieJetclient
 		LoginHelper loginHelper = builder.build();
 		SessionFactory sessionFactory = new SessionFactory(loginHelper);
 		ScheduledExecutorService taskExecutor = Executors.newSingleThreadScheduledExecutor();
-		for(int i = 1; i<=50; i++){
+		for(int i = 1; i<=10; i++){
 			Session session = sessionFactory.createAndConnectSession();
 			addDefaultHandlerToSession(session);
 			GamePlay task = null;
@@ -47,7 +47,7 @@ public class ZombieJetclient
 			public void onDataIn(Event event)
 			{
 				NettyMessageBuffer buffer = (NettyMessageBuffer)event.getSource();
-				System.out.println("Remaining Human Population: " + buffer.readInt());
+				System.out.printf("[%s] Remaining Human Population: %d\n", session.getId(), buffer.readInt());
 			}
 		};
 		session.addHandler(handler);
